@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "Upgrade(npm):"
+      prefix-development: "Upgrade(dev):"
+    reviewers:
+      - "evelynhathaway"
+    assignees:
+      - "evelynhathaway"

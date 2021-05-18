@@ -1,0 +1,22 @@
+# Node
+node_modules/
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Built
+/dist
+
+# Testing
+/coverage
+
+# Other
+.cache
+/*.log
+*.lock
+.DS_Store
