@@ -52,7 +52,7 @@
     "eslint-plugin-unicorn": "^32.0.1",
     "husky": "^7.0.4",
     "lint-staged": "^11.0.0",
-    "semantic-release": "^18.0.1",
+    "semantic-release": "^19.0.3",
     "sort-package-json": "^1.53.1"
   },
   "peerDependencies": {
