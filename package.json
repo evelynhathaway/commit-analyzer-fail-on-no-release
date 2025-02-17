@@ -1,6 +1,6 @@
 {
   "name": "commit-analyzer-fail-on-no-release",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A drop-in replacement for @semantic-release/commit-analyzer that fails when no release is made",
   "keywords": [
     "semantic-release",

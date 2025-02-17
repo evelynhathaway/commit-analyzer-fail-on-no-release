@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.0.0
+
+**[`v1.0.1...v2.0.0`](https://github.com/evelynhathaway/commit-analyzer-fail-on-no-release/compare/v1.0.1...v2.0.0)** - **2025-02-17**
+
+### 💥 Breaking
+
+- Require @semantic-release/commit-analyzer between ^10 and ^13, Node.js >=20, convert to ESM to match commit-analyzer [`fd8fee4`](https://github.com/evelynhathaway/commit-analyzer-fail-on-no-release/commit/fd8fee4)
+
 ## v1.0.1
 
 **[`v1.0.0...v1.0.1`](https://github.com/evelynhathaway/commit-analyzer-fail-on-no-release/compare/v1.0.0...v1.0.1)** - **2021-12-16**
