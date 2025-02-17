@@ -18,6 +18,10 @@
   "license": "MIT",
   "author": "Evelyn Hathaway <npm@evelyn.dev> (https://evelyn.dev)",
   "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js"
+  },
   "main": "./lib/index.js",
   "directories": {
     "lib": "/lib"
@@ -26,8 +30,9 @@
     "/lib"
   ],
   "scripts": {
-    "lint": "eslint ./",
-    "prepare": "husky install"
+    "lint": "eslint",
+    "prepare": "husky",
+    "test-release": "semantic-release -d -e ./release-test.config.js"
   },
   "commitlint": {
     "extends": "./node_modules/conventional-changelog-evelyn/commitlint.config.js"
@@ -40,25 +45,21 @@
     "extends": "conventional-changelog-evelyn/release.config.js"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "commitlint": "^13.2.1",
-    "conventional-changelog-evelyn": "^1.3.1",
-    "eslint": "^7.32.0",
-    "eslint-plugin-evelyn": "^6.2.1",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-regexp": "^0.13.2",
-    "eslint-plugin-unicorn": "^32.0.1",
-    "husky": "^7.0.4",
-    "lint-staged": "^11.0.0",
-    "semantic-release": "^18.0.1",
-    "sort-package-json": "^1.53.1"
+    "commitlint": "^19.7.1",
+    "conventional-changelog-evelyn": "^2.0.0",
+    "eslint": "^9.20.1",
+    "eslint-plugin-evelyn": "^10.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "semantic-release": "^24.2.3",
+    "sort-package-json": "^2.14.0"
   },
   "peerDependencies": {
-    "@semantic-release/commit-analyzer": "^9.0.0 || ^8.0.0"
+    "@semantic-release/commit-analyzer": "^13.0.0 || ^12.0.0 || ^11.0.0 || ^10.0.0"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=20.0.0"
   }
 }

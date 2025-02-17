@@ -24,30 +24,43 @@ npm install --save-dev commit-analyzer-fail-on-no-release
 
 ## Usage
 
-In your [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration), replace the default commit analyzer with `commit-analyzer-fail-on-no-release`. All configuration options pass through to the default plugin.
+In your [**semantic-release** configuration file](https://semantic-release.gitbook.io/semantic-release/usage/configuration#configuration-file), replace the default commit analyzer with `commit-analyzer-fail-on-no-release`. All configuration options pass through to the default plugin.
 
-**`.releaserc`**
+**`release.config.mjs`**
 
 ```diff
- {
-   "plugins": [
-     [
--      "@semantic-release/commit-analyzer",
-+      "commit-analyzer-fail-on-no-release",
-       {
-         "preset": "angular",
-         "releaseRules": [
-           {"type": "docs", "scope":"README", "release": "patch"},
-           {"type": "refactor", "release": "patch"},
-           {"type": "style", "release": "patch"}
-         ],
-         "parserOpts": {
-           "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
-         }
-       }
-     ]
-   ]
- }
+ export default {
+ 	plugins: [
+ 		[
+-			"@semantic-release/commit-analyzer",
++			"commit-analyzer-fail-on-no-release",
+ 			{
+ 				"preset": "angular",
+ 				"releaseRules": [
+ 					{"type": "docs", "scope": "README", "release": "patch"},
+ 					{"type": "refactor", "release": "patch"},
+ 					{"type": "style", "release": "patch"},
+ 				],
+ 				"parserOpts": {
+ 					"noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"],
+ 				},
+ 			},
+ 		],
+ 	],
+ };
+```
+
+## Development
+
+### Testing
+
+Make a either a no commit, a typed commit that will release, or one that won't and then see if the error was thrown if
+expected while running a dummy dry-run release.
+
+```bash
+npm link
+npm link commit-analyzer-fail-on-no-release
+npm run test-release
 ```
 
 ## License

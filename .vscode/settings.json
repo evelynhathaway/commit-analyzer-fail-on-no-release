@@ -1,7 +1,21 @@
 {
-	"editor.formatOnSave": true,
+	"editor.formatOnSave": false,
 	"eslint.format.enable": true,
 	"eslint.lintTask.enable": true,
+	// Format using ESLint on save
+	// - Source: https://eslint.style/guide/faq#how-to-auto-format-on-save
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	// Hide fixable style ESLint problems
+	// - Source: https://eslint.style/guide/faq#the-error-messages-squiggly-lines-for-code-style-are-annoying
+	"eslint.rules.customizations": [
+		{
+			"rule": "@stylistic/*",
+			"fixable": true,
+			"severity": "off"
+		}
+	],
 	"files.associations": {
 		".env": "shellscript",
 		".env.*": "shellscript",
